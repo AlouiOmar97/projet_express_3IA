@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+	<h1>{{title}}</h1>
+	<ul>
+		{% for contact in list %}
+			<li>
+				{{ contact.FullName }}
+				<a href="/contact/editform/{{contact._id}}">edit</a>
+				<a href="/contact/delete/{{contact._id}}">delete</a>
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
